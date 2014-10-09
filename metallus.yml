@@ -13,6 +13,8 @@ jobs:
     packages:
       - type: debian
         name: ruby2.0.0
+        conflicts:
+          - ruby-2-mxm
         depends:
           - libreadline
           - libssl
