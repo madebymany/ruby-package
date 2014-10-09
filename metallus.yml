@@ -1,0 +1,22 @@
+software_groups: &software
+  - "base"
+
+jobs:
+  etcd:
+    builder: "make"
+    software_groups: *software
+    base: "ubuntu:12.04"
+    build_depends:
+      - libreadline-dev
+      - libssl-dev
+      - openssl
+    packages:
+      - type: debian
+        name: ruby2.0.0
+        depends:
+          - libreadline
+          - libssl
+          - openssl
+        repos:
+          - mxm-public
+        target: install
