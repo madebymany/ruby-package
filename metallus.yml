@@ -1,5 +1,5 @@
 software_groups: &software
-  - "base"
+  - "base_trusty"
 
 packages:
   branch_codenames:
