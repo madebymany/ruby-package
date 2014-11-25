@@ -1,23 +1,24 @@
 software_groups: &software
   - "base"
 
+packages:
+  branch_codenames:
+    ruby2.0: unstable
+    production: stable
+
 jobs:
-  ruby:
+  ruby2.0-mxm-default:
     builder: "make"
     software_groups: *software
-    base: "ubuntu:12.04"
+    base: "ubuntu:14.04"
     build_depends:
-      - libreadline-dev
-      - libssl-dev
-      - openssl
+      - ruby2.0
     packages:
       - type: debian
-        name: ruby2.0.0
-        version: 2.0.0-p576
-        conflicts:
-          - ruby-2-mxm
+        name: ruby2.0-mxm-default
+        version: 2.0
         depends:
-          - openssl
+          - ruby2.0
         repos:
           - mxm-public
         target: install
