@@ -6,6 +6,11 @@ packages:
     ruby2.0: unstable
     production: stable
 
+packages:
+  branch_codenames:
+    master: unstable
+    production: stable
+
 jobs:
   ruby2.0-mxm-default:
     builder: "make"
