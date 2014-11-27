@@ -12,7 +12,7 @@ jobs:
     packages:
       - type: debian
         name: ruby2.0-mxm-default
-        version: 2.0
+        version: 2.0-1
         depends:
           - ruby2.0
         repos:
