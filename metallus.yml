@@ -3,11 +3,6 @@ packages:
     ruby2.0: trusty-unstable
     production: trusty-stable
 
-packages:
-  branch_codenames:
-    master: unstable
-    production: stable
-
 jobs:
   ruby2.0-mxm-default:
     builder: "make"
